@@ -1,0 +1,11 @@
+.container
+  %h4 New Survey
+  = form_for @survey, remote: true do |f|
+    .form-group
+      = f.label :name, "Survey Title", class: "pull-left"
+      = f.text_field :name, class: "form-control"
+    .form-group
+      = f.label :body, "Optional Description / Disclaimer", class: "pull-left"
+      = f.text_area :body, rows: "5", class: "form-control"
+    %p.button
+      = f.submit 'Submit', class: "btn btn-default"
